@@ -1,0 +1,66 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+p, li {
+    font-family: "Calibri";
+    font-size: 14pt;
+}
+
+.content {
+    min-height: 100%;
+}
+.content-inside {
+    padding-bottom: 50px;
+}
+.footer {
+    height: 120px;
+    margin-top: -50px;
+}
+.text-color {
+    color: 	#0d2c69;
+    font-family: "Candara";
+    font-size: 28pt;
+}
+.text-color-secondary{
+    color: 	#0d2c69;
+    font-family: "Candara Light";
+    font-size: 20pt;
+}
+.header-font{
+    color: 	#0d2c69;
+    font-family: "Candara Light";
+    font-size: 14pt;
+}
+
+.footer-info {
+    font-size: 8pt;
+}
+
+.navbar {
+  margin-bottom: -1px;
+}
+
+.navbar-header {
+  display: inline-block;
+  padding-top:.3125rem;
+  padding-bottom:.3125rem;
+  margin-right:4rem;
+  font-size:2.50rem;
+  font-family: "MV Boli";
+  color: darkblue;
+  line-height:inherit;
+  white-space:nowrap;
+}.navbar-header:focus.navbar-header:hover{text-decoration:none}
+
+ .bg-dark{
+
+ }
+
+ .bg-light{
+
+ }
+
+ .border-dark{
+
+ }

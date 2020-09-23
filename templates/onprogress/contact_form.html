@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="row col-md-12">
+
+    <div class="col-md-4">
+        <div class="modal-header">
+            <label class="text-left text-black-50">
+                İletişim formu sayesinde bizimle dilediğinzi saatte iletişime geçerek istek ve şikayetlerinizi bildirebilrisiniz. Yaptığımız iş kadar müşterilerimiz de önemlidir. Müşterilerimiz kadar da yorumlar ve bizim için düşündükleriniz. Bu konuda fikirlerinizi lütfen belirtin. Hatalarımız olursa düzeltelim. Size daha iyi hizmet vermek için elimizden geleni yapalım…
+            </label>
+        </div>
+        <div class="row m-md-3 mt-3 text-center ">
+            <img src="{{ 'static/img/mail.png' }}" class="mr-2" style="height: 25px; width: 25px">
+            <p class="font-weight-bold"> info@kurye16.com</p>
+        </div>
+        <div class="row m-md-3 text-center ">
+            <img src="{{ 'static/img/mail.png' }}" class="mr-2" style="height: 25px; width: 25px">
+            <p class="font-weight-bold"> muhasebe@kurye16.com</p>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-8 mx-auto align-content-lg-start">
+        <div class="card m-md-3 row-cols-2">
+            <div class="card-header bg-light text-dark text-center">
+                <h4 class="text-color">Bizimle İletişime Geçin</h4>
+
+            </div>
+            <form method="post">
+                {% csrf_token %}
+              <div class="form-row">
+                <div class="col m-md-3 m-2">
+                  <input type="text" class="form-control" placeholder="İsim" name="name" required>
+                </div>
+                <div class="col m-md-3 m-2">
+                  <input type="text" class="form-control" placeholder="Soyisim" name="surname" required>
+                </div>
+                  <div class="col m-md-3 m-2">
+                  <input type="text" class="form-control" placeholder="Konu" name="subject" required>
+                </div>
+              </div>
+                <div class="form-row">
+                    <div class="col m-md-3 m-2">
+                        <input type="number" class="form-control" placeholder="Telefon Numarası" name="phone" required>
+                    </div>
+
+                    <div class="col m-md-3 m-2">
+                        <input type="email" class="form-control" placeholder="E-mail Adresi" name="email" required>
+                    </div>
+                </div>
+
+                <div class="row-cols-3 m-md-3 m-2">
+                      <textarea type="text" class="form-control" placeholder="İçerik" rows="10" name="content" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="row col-md-12">
+                        <div class="col-md-9">
+                            <div class="m-md-3 m-2">
+                                <input type="checkbox" id="confirmInformation" class="ml-3 mr-2" name="confirm"><label class="m-md-auto">Bilgilendirme ve güncelleme maili almak istiyorum.</label>
+                            </div>
+                            <div class="m-md-3 m-2">
+                                <input type="checkbox" id="readInformation " class="ml-3 mr-2" name="read" required><label class="m-md-auto"><a href="{% url 'politics' %}">Kullanıcı Sözleşmesi</a>ni okudum ve kabul ediyorum.</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-right m-md-3 m-2">
+                                <button type="submit" class="btn btn-primary pr-2" style="width: 120px; height: 60px; background-color: #0d2c69; border-color: #0d2c69"><h4>Gönder</h4></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

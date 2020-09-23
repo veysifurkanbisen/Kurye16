@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, shrink-to-fit=yes">
+    {% if title %}
+        <title>Kurye16 - {{ title }}</title>
+    {% else %}
+        <title>Kurye16</title>
+    {% endif %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="http://example.com/favicon.png">
+
+</head>
+
+<body style="background: #f8f9fb">
+<div >
+    <div class= "container-fluid pt-0">
+        <div class="d-flex flex-column flex-md-row align-items-center p-5 px-md-4 mb-3" >
+            <img src="{{ 'static/img/logo_mavi-removebg.png' }}" class="my-0 mr-md-auto" style="width: 300px; height: 115px">
+            <!--<h1 class="my-0 mr-md-auto font-weight-bold font-italic text-light" style="font-family: 'MV Boli'">Kurye16</h1>-->
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 font-weight-bold header-font" style="text-decoration: #00adef" href="{% url 'home' %}">Anasayfa</a>
+                <a class="p-2 font-weight-bold header-font" style="text-decoration: #00adef" href="{% url 'contact_form' %}">İletişim</a>
+                <a class="p-2 font-weight-bold header-font" style="text-decoration: #00adef" href="{% url 'about' %}">Hakkımızda</a>
+                <a class="p-2 font-weight-bold header-font" style="text-decoration: #00adef" href="{% url 'politics' %}">Teslimat & Gizlilik</a>
+
+            </nav>
+            <div>
+                <img src="{{ 'static/img/socialmedia/whatsapp.png' }}" class="mr-auto" style="width: 20px; height: 20px">
+                <label class="text-dark-50 text-color-secondary" style="font-size: 16pt"> +90 (0533) 924 17 04</label>
+            </div>
+        </div>
+</div>
+<div class="content container">
+    <div class="content pb-5">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    </div>
+    </div>
+
+
+
+    <footer class="footer bg-light footer-info mb-auto">
+        <div class="inner text-right">
+            <p class="pt-3" style="margin: 10px">
+                <a href="#" >
+                    <img src="{{ "static/img/socialmedia/instagram.png" }}" style="height: 30px; width: 30px;">
+                </a>
+                <a href="#" class="mr-2 ml-2">
+                    <img src="{{ "static/img/socialmedia/facebook.png" }}" style="height: 30px; width: 30px;">
+                </a>
+                <a href="#" >
+                    <img src="{{ "static/img/socialmedia/twitter.png" }}" style="height: 30px; width: 30px">
+                </a>
+            </p>
+        </div>
+    <div class="inner text-center">
+        <p class="mb-auto footer-info">Copyright ® 2020 KURYE16</p>
+         <p class="mb-auto footer-info">Tüm Hakları Saklıdır <a href="https://kurye16.com/">Kurye16</a>, by <a href="https://www.linkedin.com/in/veysi-furkan-bisen-88837219a/">Veysi Furkan Bisen</a>.</p>
+        <p class="mb-2 footer-info">Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+    </div>
+    </footer>
+
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

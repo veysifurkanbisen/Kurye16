@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="content p-3">
+        <h3 class="font-weight-bold text-left p-3 text-color" >{{ title_teslim }}</h3>
+        <p class="p-3">{{ body_teslim }}</p>
+    </div>
+    <div class="content p-3">
+        <h3 class="font-weight-bold text-left p-3 text-color">{{ title_gizli }}</h3>
+        <p class="p-3">{{ body_gizli }}</p>
+    </div>
+    <div class="content p-3">
+        <h5 class="font-weight-bold text-left p-3 text-color-secondary"> o {{ title_gizli_kvk }}</h5>
+        <p class="p-3">{{ body_gizli_kvk_top }}</p>
+        {% for items in body_gizli_kvk_list %}
+                <li class="list-unstyled pl-5">{{ items }}</li>
+        {% endfor %}
+        <p class="p-3">{{ body_gizli_kvk_bottom }}</p>
+        <h5 class="font-weight-bold text-left p-3 text-color-secondary"> o {{ title_gizli_telif }}</h5>
+        <p class="p-3">{{ body_gizli_telif }}</p>
+        <h5 class="font-weight-bold text-left p-3 text-color-secondary"> o {{ title_gizli_diger }}</h5>
+        <p class="p-3">{{ body_gizli_diger }}</p>
+    </div>
+{% endblock %}
